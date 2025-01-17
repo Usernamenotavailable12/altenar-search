@@ -1,0 +1,36 @@
+<div id="wln"></div>
+<script src="https://sb2wsdk-altenar2.biahosted.com/altenarWSDK.js"></script>
+<body>
+    <!-- Container for the widget -->
+    <div id="container"></div>
+
+    <script>
+        // Initialize Altenar WSDK
+        window.altenarWSDK.init({
+            integration: 'ambassadoribet',
+            culture: 'ka-GE',
+            oddsFormat: 0
+        });
+
+        // Add the WEventSearch widget
+        window.altenarWSDK.addWidget({
+            widget: 'WEventSearch',
+            props: {
+                clearOnSelect: false,
+                iconOverride: undefined,
+                imageType: 0,
+                onChampionshipSelect: ({ championshipIds, periodType }) => {
+                    console.log("Championship Selected:", championshipIds, periodType);
+                },
+                onEventSelect: (event) => {
+                    console.log("Event Selected:", event);
+                },
+                showBookedLiveIndicator: true,
+                showFavouriteEventsIndicator: false,
+                showLiveIndicator: true,
+                variants: undefined,
+                virtualKeyboard: { enabled: false, showIntermediateInput: false },
+            },
+            container: document.getElementById('container')
+        });
+    </script>
