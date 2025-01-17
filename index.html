@@ -1,5 +1,6 @@
 <div id="wln"></div>
-<script src="https://sb2wsdk-altenar2.biahosted.com/altenarWSDK.js"></script>
+<script src="https://sb2widgetsstatic-altenar2-stage.biahosted.com/altenarWSDK.js"></script>
+<script id="altenar-script" src="https://sb2widgetsstatic-altenar2-stage.biahosted.com/altenarWSDK.js" defer=""></script>
 <body>
     <!-- Container for the widget -->
     <div id="container"></div>
@@ -7,9 +8,7 @@
     <script>
         // Initialize Altenar WSDK
         window.altenarWSDK.init({
-            integration: 'ambassadoribet',
-            culture: 'ka-GE',
-            oddsFormat: 0
+            integration: 'ambassadoribet'
         });
 
         // Add the WEventSearch widget
@@ -34,3 +33,4 @@
             container: document.getElementById('container')
         });
     </script>
+
